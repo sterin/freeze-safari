@@ -1,0 +1,48 @@
+{
+  "name": "safari-freeze",
+  "version": "1.0.0",
+  "description": "WebGL shader that freezes my MacBook Pro",
+  "main": "demo.js",
+  "license": "MIT",
+  "author": {
+    "name": "Baruch Sterin",
+    "email": "safari-freeze",
+    "url": "https://github.com/sterin/safari-freeze"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "a-big-triangle": "^1.0.3",
+    "browserify": "^9.0.8",
+    "budo": "^3.0.4",
+    "garnish": "^2.1.3",
+    "get-pixels": "^3.3.0",
+    "gl-shader": "^4.0.1",
+    "gl-texture2d": "^2.0.8",
+    "glslify": "^2.1.1",
+    "ndpack-image": "^3.0.0",
+    "raf-loop": "^1.0.1",
+    "uglify-js": "^3.0.24",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.1.0",
+    "webgl-context": "^2.1.2"
+  },
+  "scripts": {
+    "start": "budo demo.js:bundle.js --live -v -t glslify | garnish",
+    "build": "browserify demo.js -t glslify | uglifyjs -cm > bundle.js"
+  },
+  "keywords": [
+    "macOs",
+    "freeze",
+    "glsl",
+    "glslify",
+    "stackgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sterin/safari-freeze.git"
+  },
+  "homepage": "https://github.com/sterin/safari-freeze",
+  "bugs": {
+    "url": "https://github.com/sterin/safari-freeze/issues"
+  }
+}
